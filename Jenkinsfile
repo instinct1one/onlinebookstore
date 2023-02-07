@@ -9,8 +9,8 @@ pipeline {
         }
         stage ( "copy_1" ) {
             steps {
-               sh "chmod +x copy_settings_&_tomcat.sh"
-               sh "sh copy_settings_&_tomcat.sh"
+               sh "chmod +x settings.sh webapps.sh"
+               sh "sh settings.sh"
             }
         }
         stage ( "install" ) {
@@ -20,8 +20,7 @@ pipeline {
         }
         stage ( "copy_2" ) {
             steps {
-               sh "chmod +x copy_to_webapps.sh"
-               sh "sh copy_to_webapps.sh"
+               sh "sh webapps.sh"
             }
         }
         stage ( "deploy" ) {
