@@ -18,7 +18,7 @@ pipeline {
                sh "mvn clean install"
             }
         }
-        stage ( "copy_2" ) {
+        stage ( "past_2" ) {
             steps {
                sh "sh webapps.sh"
             }
