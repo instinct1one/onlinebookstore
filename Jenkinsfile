@@ -18,13 +18,13 @@ pipeline {
                sh "mvn clean install"
             }
         }
-        stage ( "copy_1" ) {
+        stage ( "copy_2" ) {
             steps {
                sh "chmod +x copy_to_webapps.sh"
                sh "sh copy_to_webapps.sh"
             }
         }
-        stage ( "install" ) {
+        stage ( "deploy" ) {
             steps {
                sh "mvn clean deploy"
             }
