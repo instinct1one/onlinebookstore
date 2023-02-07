@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ( "cloning" ) {
             steps ( "GIT" ) {
-               git_url: "https://github.com/instinct1one/onlinebookstore.git",
+               git url: "https://github.com/instinct1one/onlinebookstore.git",
                branch: "master"
             }
         }
